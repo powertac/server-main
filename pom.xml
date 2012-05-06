@@ -10,7 +10,7 @@
 
   <artifactId>server-main</artifactId>
   <name>Power TAC server main</name>
-  <version>0.5.0</version>
+  <version>0.5.1-SNAPSHOT</version>
   <description>Top-level module of the Power TAC simulation server</description>
 
   <dependencies>
@@ -64,12 +64,12 @@
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>server-interface</artifactId>
-      <version>0.5.0</version>
+      <version>0.5.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>accounting</artifactId>
-      <version>0.5.0</version>
+      <version>0.5.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
