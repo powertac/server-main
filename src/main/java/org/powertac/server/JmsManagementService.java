@@ -1,5 +1,6 @@
 package org.powertac.server;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -17,6 +18,7 @@ import javax.jms.Session;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.broker.Broker;
+import org.apache.activemq.broker.BrokerPlugin;
 import org.apache.activemq.broker.BrokerRegistry;
 import org.apache.activemq.broker.BrokerService;
 import org.apache.activemq.broker.ConnectionContext;
@@ -93,12 +95,21 @@ public class JmsManagementService
       brokerService.setBrokerName(getJmsBrokerName());
       brokerService.setPersistent(false);
       brokerService.addConnector(getJmsBrokerUrl());
+      brokerService.setPlugins(getPlugins());
+      brokerService.setUseJmx(false);
       brokerService.start();
       brokerService.waitUntilStarted();
     }
     catch (Exception e) {
       log.error("Failed to start JMS Server", e);
     }
+  }
+
+  private BrokerPlugin[] getPlugins ()
+  {
+    ArrayList<BrokerPlugin> plugins = new ArrayList<BrokerPlugin>();
+    plugins.add(new HostBasedAuthorizationBrokerPlugin());
+    return plugins.toArray(new BrokerPlugin[plugins.size()]);
   }
 
   public void stop ()
@@ -279,7 +290,7 @@ public class JmsManagementService
   {
     DestinationStatistics stats = dst.getDestinationStatistics();
     long depth = stats.getEnqueues().getCount()
-                      - stats.getDequeues().getCount();
+                 - stats.getDequeues().getCount();
     log.info("destination " + dst.getName() + " - depth:" + depth);
     return depth > getMaxQueueDepth();
   }
@@ -329,4 +340,3 @@ public class JmsManagementService
     log.info("processQueues - successfully remove queue");
   }
 }
-
