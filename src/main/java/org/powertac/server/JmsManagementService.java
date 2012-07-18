@@ -300,7 +300,7 @@ public class JmsManagementService
     DestinationStatistics stats = dst.getDestinationStatistics();
     long depth = stats.getEnqueues().getCount()
                  - stats.getDequeues().getCount();
-    log.info("destination " + dst.getName() + " - depth:" + depth);
+    log.debug("destination " + dst.getName() + " - depth:" + depth);
     return depth > getMaxQueueDepth();
   }
 
@@ -308,7 +308,7 @@ public class JmsManagementService
   {
     BrokerService brokerService = getProvider();
     if (brokerService == null) {
-      log.info("processQueues - JMS Server has not been started");
+      log.debug("processQueues - JMS Server has not been started");
       return null;
     }
 
@@ -346,6 +346,6 @@ public class JmsManagementService
     ConnectionContext context = new ConnectionContext();
     context.setBroker(broker);
     broker.removeDestination(context, amqDestination, 0);
-    log.info("processQueues - successfully remove queue");
+    log.info("processQueues - successfully remove queue " + destination.getName());
   }
 }
