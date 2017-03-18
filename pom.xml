@@ -5,7 +5,7 @@
 
   <artifactId>server-main</artifactId>
   <packaging>jar</packaging>
-  <version>1.4.1</version>
+  <version>1.4.2-SNAPSHOT</version>
 
   <name>Power TAC server main</name>
   <description>Top-level module of the Power TAC simulation server</description>
@@ -108,7 +108,7 @@
     <connection>scm:git:git//github.com/powertac/server-main.git</connection>
     <developerConnection>scm:git:git@github.com:powertac/server-main.git</developerConnection>
     <url>https://github.com/powertac/server-main/</url>
-    <tag>server-main-1.4.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
 </project>
