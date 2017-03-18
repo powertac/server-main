@@ -7,6 +7,7 @@
 
   <artifactId>server-main</artifactId>
   <packaging>jar</packaging>
+  <version>1.4.0-SNAPSHOT</version>
 
   <name>Power TAC server main</name>
   <description>Top-level module of the Power TAC simulation server</description>
@@ -15,7 +16,7 @@
   <parent>
     <groupId>org.powertac</groupId>
     <artifactId>powertac-server</artifactId>
-    <version>1.4.0-SNAPSHOT</version>
+    <version>1.4.1</version>
   </parent>
 
 
@@ -25,62 +26,62 @@
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>server-interface</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>accounting</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>auctioneer</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>default-broker</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>distribution-utility</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>genco</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>household-customer</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>factored-customer</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>officecomplex-customer</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>balancing-market</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>customer-models</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>org.powertac</groupId>
       <artifactId>evcustomer</artifactId>
-      <version>${powertac-server.version}</version>
+      <version>1.4.1</version>
     </dependency>
 
     <!-- Messaging -->
