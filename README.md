@@ -1,4 +1,5 @@
-server-main
-===========
+# Discontinued
 
-This is the top-level module of the Power TAC simulation server. It contains the main() method, the clock and time management, communications, CLI interpretation, and session management code.
+This repository is no longer maintained separately, but now a part of
+[powertac-server](https://github.com/powertac/powertac-server/).
+
